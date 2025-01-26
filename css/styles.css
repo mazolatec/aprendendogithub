@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+  }
+  
+  h1 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .command {
+    font-weight: bold;
+    color: #2a9d8f;
+  }
+  
+  .description {
+    color: #264653;
+    margin-left: 20px;
+  }
+  
+  .comment {
+    color: #8fcf7a; /* Verde claro para os comentários */
+    font-style: italic;
+    margin-left: 20px;
+  }
+  
+  .category {
+    font-size: 1.2em;
+    color: #e76f51;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    overflow-x: auto;
+  }
+  

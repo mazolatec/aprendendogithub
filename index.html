@@ -1,13 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendendo Git Commands</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1> Index teste</h1>
-    <a href="home.html"> Página Home </a>
-    <a href="vendas.html"> Ir para página de vendas</a>
+  <h1>Git Commands</h1>
+
+
+  <div>
+    <div class="category">Uso estes comandos para credenciar meu pc</div>
+    <pre>
+      <span class="command">git config --global user.name "Seu nome"</span> 
+      <span class="description">Adicione seu nome </span>
+      <span class="comment"># Configura Usuario para acesso terminal</span>
+    </pre>
+    <pre>
+      <span class="command">git config --global user.email "Seu email de cadastro do Github"</span> 
+      <span class="description">Adicionar seu email</span>
+      <span class="comment"># Ainda configurando Usuario para acesso terminal</span>
+    </pre>
+    <pre>
+      <span class="command">ssh-keygen -t ed25519 -C mazolatec@gmail.com</span> 
+      <span class="description">Gerando chave publica e privada para cada pc </span>
+      <span class="comment"># O conteudo desta chave publica vai ser cadastrada para seu pc poder ter livre acesso </span>
+    </pre>
+    <pre>
+      <span class="command">Chave Gerada neste local (/c/Users/user/.ssh/id_ed25519.pub</span> 
+      <span class="description">Abrir conteudo deste arquivo gerado para cadastrar no site veja abaixo</span>
+      <span class="comment"># Abrir arquivo copiar ir para site https://github.com/dashboard 
+        em Settings -> SSH and GPG keys -> New SSH key 
+        no Title colocar nome do pc que vc vai usar em KEY 
+         adicionar conteudo da chave PUBLICA
+        </span>
+    </pre>
+    
+  </div>
+
+
+  <div>
+    <div class="category">Basic Commands</div>
+    <pre>
+      <span class="command">git init</span> 
+      <span class="description">Initialize a new Git repository</span>
+      <span class="comment"># Cria um repositório vazio no diretório atual</span>
+    </pre>
+    <pre>
+      <span class="command">git status</span> 
+      <span class="description">Show the working tree status</span>
+      <span class="comment"># Exibe mudanças e arquivos rastreados/não rastreados</span>
+    </pre>
+    <pre>
+      <span class="command">git add .</span> 
+      <span class="description">Add file contents to the staging area</span>
+      <span class="comment"># Adiciona arquivos ao índice para o próximo commit</span>
+    </pre>
+    <pre>
+      <span class="command">git commit -m "message"</span> 
+      <span class="description">Record changes to the repository</span>
+      <span class="comment"># Salva as mudanças com uma mensagem descritiva</span>
+    </pre>
+  </div>
+
+  <div>
+    <div class="category">Branching and Merging - Ramificação e Mesclagem</div>
+    <pre>
+      <span class="command">git branch</span> 
+      <span class="description">List, create, or delete branches</span>
+      <span class="comment"># Gerencia branches no repositório</span>
+    </pre>
+    <pre>
+      <span class="command">git checkout branch-name</span> 
+      <span class="description">Switch to a specific branch</span>
+      <span class="comment"># Altera para outra branch</span>
+    </pre>
+    <pre>
+      <span class="command">git merge branch-name</span> 
+      <span class="description">Merge a branch into the current branch</span>
+      <span class="comment"># Mescla outra branch na atual</span>
+    </pre>
+  </div>
+
+  <div>
+    <div class="category">Remote Commands</div>
+    <pre>
+      <span class="command">git remote add origin URL</span> 
+      <span class="description">Add a remote repository</span>
+      <span class="comment"># Conecta um repositório remoto</span>
+    </pre>
+    <pre>
+      <span class="command">git push</span> 
+      <span class="description">Push changes to a remote repository</span>
+      <span class="comment"># Envia commits para o repositório remoto</span>
+    </pre>
+    <pre>
+      <span class="command">git pull</span> 
+      <span class="description">Fetch and integrate changes from a remote repository</span>
+      <span class="comment"># Atualiza o repositório local com mudanças remotas</span>
+    </pre>
+    <pre>
+      <span class="command">git clone URL</span> 
+      <span class="description">Clone a repository</span>
+      <span class="comment"># Clona um repositório para o diretório local</span>
+    </pre>
+  </div>
+
+  <div>
+    <div class="category">Advanced Commands</div>
+    <pre>
+      <span class="command">git log</span> 
+      <span class="description">Show commit logs</span>
+      <span class="comment"># Mostra o histórico de commits</span>
+    </pre>
+    <pre>
+      <span class="command">git diff</span> 
+      <span class="description">Show changes between commits or working tree</span>
+      <span class="comment"># Compara mudanças entre commits ou o estado atual</span>
+    </pre>
+    <pre>
+      <span class="command">git stash</span> 
+      <span class="description">Stash changes in a dirty working directory</span>
+      <span class="comment"># Salva temporariamente mudanças pendentes</span>
+    </pre>
+    <pre>
+      <span class="command">git reset</span> 
+      <span class="description">Reset the current HEAD to a specific state</span>
+      <span class="comment"># Reverte para um estado anterior</span>
+    </pre>
+  </div>
 </body>
 </html>
