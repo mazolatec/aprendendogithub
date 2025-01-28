@@ -2,41 +2,44 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     margin: 20px;
+    background-color: #242424;
+    font-size: 18;
   }
   
   h1 {
-    color: #333;
+    color: #ffffff;
     text-align: center;
   }
   
   .command {
+    font-size: large;
     font-weight: bold;
-    color: #2a9d8f;
+    color: #3f6464;
   }
   
   .description {
-    color: #264653;
+    color: #ffffff;
     margin-left: 20px;
   }
   
   .comment {
-    color: #8fcf7a; /* Verde claro para os comentários */
+    color: #5d7de4; /* Verde claro para os comentários */
     font-style: italic;
     margin-left: 20px;
   }
   
   .category {
     font-size: 1.2em;
-    color: #e76f51;
+    color: #f3c8be;
     margin-top: 20px;
     margin-bottom: 10px;
   }
   
   pre {
-    background-color: #f4f4f4;
+    background-color: #2a2a2a;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    
     overflow-x: auto;
   }
   
