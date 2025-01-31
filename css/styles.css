@@ -1,45 +1,128 @@
+/* 🎨 GERAL */
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 20px;
-    background-color: #242424;
-    font-size: 18;
-  }
-  
-  h1 {
-    color: #ffffff;
-    text-align: center;
-  }
-  
-  .command {
-    font-size: large;
-    font-weight: bold;
-    color: #3f6464;
-  }
-  
-  .description {
-    color: #ffffff;
-    margin-left: 20px;
-  }
-  
-  .comment {
-    color: #5d7de4; /* Verde claro para os comentários */
-    font-style: italic;
-    margin-left: 20px;
-  }
-  
-  .category {
-    font-size: 1.2em;
-    color: #f3c8be;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-  
-  pre {
-    background-color: #2a2a2a;
+  font-family: Arial, sans-serif;
+  font-size: large;
+  background-color: #242424;
+  color: #ffffff;
+  margin: 0;
+}
+
+/* 📌 NAVBAR */
+.navbar {
+  background: #000000; /* Fundo preto sólido */
+  padding: 10px 20px;
+  border-bottom: 2px solid #57B9FC;
+}
+
+.navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #57B9FC;
+  display: flex;
+  align-items: center;
+}
+
+.navbar .logo {
+  max-width: 40px;
+  margin-right: 8px;
+}
+
+/* 📝 ITENS DO MENU */
+.navbar .nav-link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #edeeee;
+  padding: 8px 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+  background-color: #57B9FC;
+  color: #242424;
+  border-radius: 5px;
+}
+
+/* 📱 ESTILOS PARA MOBILE */
+@media (max-width: 992px) {
+  .navbar .collapse {
+    background: #242424;
+    border-radius: 8px;
     padding: 10px;
-    border-radius: 5px;
-    
-    overflow-x: auto;
   }
+
+  .navbar .nav-link {
+    text-align: center;
+    padding: 10px;
+    display: block;
+  }
+}
+
+/* 🖥️ CÓDIGO DENTRO DO <pre> */
+pre {
+  background-color: #333333;
+  padding: 15px;
   
+  border-radius: 8px;
+  overflow-x: auto;
+  white-space: pre-wrap;  /* Permite quebra de linha automática */
+  word-wrap: break-word;  /* Garante que textos longos não estourem o layout */
+}
+
+/* 🔹 ESTILOS ESPECÍFICOS */
+.command {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #57B9FC;
+}
+
+.description {
+  color: #4d7954; /* Verde mais visível */
+}
+
+.comment {
+  color: #e7eaec;
+  font-style: italic;
+}
+
+
+.filecolorgreen {
+  color: rgb(24, 245, 79); /* Vermelho escuro */
+  display: inline;  /* Mantém os elementos na mesma linha */
+  margin-right: 10px;
+}
+.filecolor {
+  color: rgb(184, 106, 106); /* Vermelho escuro */
+  display: inline;  /* Mantém os elementos na mesma linha */
+  margin-right: 10px;
+}
+.filecolorblue {
+  font-size: 1.1em;
+  display: inline;  /* Mantém os elementos na mesma linha */
+  color: #57B9FC;
+}
+.filecolorcomentario {
+  font-size: 1.1em;
+  display: inline;  /* Mantém os elementos na mesma linha */
+  color: #dee90a;
+}
+/* 🔗 LINKS */
+.link {
+  color: #EDE8BB;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* 📱 AJUSTES PARA TELAS MENORES */
+@media (max-width: 768px) {
+  .custom-navbar .logo {
+    width: 40px;
+  }
+
+  pre {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
