@@ -1,91 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Aprendendo Git Commands</title>
+  <title>Git Commands Emilio Mazola</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
-    <img src="images/Logo-Chip-0101.svg" alt="Imagem do topo" style="width: 10%; height: auto;">
-</header>
-  <h1>Git Commands</h1>
+  <!-- Espaço para o menu -->
+  <div id="menu-placeholder"></div>
 
-  <div>
-    <div class="category"> Minhas anotaçoes </div>
-    <pre>
-      <span class="command">Uso estes comandos para credenciar meu pc </span> 
-      <span class="description">GIT CONFIG, SSH KEYgen </span>
-      <span class="comment"># Descricão do passo a passo validado Ok</span>
-      <a class="command" href="ComandosBasicos/credential.html"> Credenciar pc</a>
-    </pre>
-    <pre>
-      <span class="command">Comandos Basicos </span> 
-      <span class="description">INIT, STATUS, ADD, COMMIT </span>
-      <span class="comment"># Após credenciar seu pc </span>
-      <a class="command" href="ComandosBasicos/basic.html"> Comandos Basicos</a>
-    </pre>
-    <pre>
-      <span class="command">Branching and Merging - Ramificação e Mesclagem</span> 
-      <span class="description">git branch, checkout, merge </span>
-      <span class="comment"># Gerenciar, Alterar, Mescla</span>
-      <a class="command" href="ComandosBasicos/branching.html">Ramificação e Mesclagem </a>
-    </pre>
-  
-  </div>
- 
+  <main class="container mt-4">
+    <h1 class="text-center text-light">Git Commands Emilio Mazola</h1>
 
- 
+    <section id="notas" class="my-4">
+      <h6> Minhas Anotações</h6> 
+      <pre>
+<span class="command">Uso estes comandos para credenciar meu PC</span>
+<span class="description">GIT CONFIG, SSH KEYgen</span>
+<span class="comment"># Descrição do passo a passo validado Ok</span>
+<a class="link" href="ComandosBasicos/credential.html">Credenciar PC</a>
+      </pre>
+    </section>
 
-  
+    <section id="comandos-basicos" class="my-4">
+      <h6>Comandos Básicos</h6>
+      <pre>
+<span class="command">Comandos Básicos</span>
+<span class="description">INIT, STATUS, ADD, COMMIT</span>
+<span class="comment"># Após credenciar seu PC</span>
+<a class="link" href="ComandosBasicos/basic.html">Comandos Básicos</a>
+      </pre>
+    </section>
 
-  <div>
-    <div class="category">Remote Commands</div>
-    <pre>
-      <span class="command">git remote add origin URL</span> 
-      <span class="description">Add a remote repository</span>
-      <span class="comment"># Conecta um repositório remoto</span>
-    </pre>
-    <pre>
-      <span class="command">git push</span> 
-      <span class="description">Push changes to a remote repository</span>
-      <span class="comment"># Envia commits para o repositório remoto</span>
-    </pre>
-    <pre>
-      <span class="command">git pull</span> 
-      <span class="description">Fetch and integrate changes from a remote repository</span>
-      <span class="comment"># Atualiza o repositório local com mudanças remotas</span>
-    </pre>
-    <pre>
-      <span class="command">git clone URL</span> 
-      <span class="description">Clone a repository</span>
-      <span class="comment"># Clona um repositório para o diretório local</span>
-    </pre>
-  </div>
+    <section id="branching" class="my-4">
+      <h6>Branching and Merging</h6>
+      <pre>
+<span class="command">Branching and Merging - Ramificação e Mesclagem</span>
+<span class="description">git branch, checkout, merge</span>
+<span class="comment"># Gerenciar, Alterar, Mesclar</span>
+<a class="link" href="ComandosBasicos/branching.html">Ramificação e Mesclagem</a>
+      </pre>
+    </section>
 
-  <div>
-    <div class="category">Advanced Commands</div>
-    <pre>
-      <span class="command">git log</span> 
-      <span class="description">Show commit logs</span>
-      <span class="comment"># Mostra o histórico de commits</span>
-    </pre>
-    <pre>
-      <span class="command">git diff</span> 
-      <span class="description">Show changes between commits or working tree</span>
-      <span class="comment"># Compara mudanças entre commits ou o estado atual</span>
-    </pre>
-    <pre>
-      <span class="command">git stash</span> 
-      <span class="description">Stash changes in a dirty working directory</span>
-      <span class="comment"># Salva temporariamente mudanças pendentes</span>
-    </pre>
-    <pre>
-      <span class="command">git reset</span> 
-      <span class="description">Reset the current HEAD to a specific state</span>
-      <span class="comment"># Reverte para um estado anterior</span>
-    </pre>
-  </div>
+    <section id="remote" class="my-4">
+      <h6>Remote Commands</h6>
+      <pre>
+<span class="command">Remote Commands</span>
+<span class="description">git remote add origin URL </span>
+<span class="description">git push, git pull, git clone URL </span>
+<span class="comment"># Conecta, Envia, Atualiza, Clona</span>
+<a class="link" href="AdvancedCommands/remotecommands.html">Comandos Remotos</a>
+      </pre>
+    </section>
+
+    <section id="advanced" class="my-4">
+      <h6>Advanced Commands</h6>
+      <pre>
+<span class="command">Advanced Commands</span>
+<span class="description">git log, git diff, git stash, git reset</span>
+<span class="comment"># Histórico, Compara, Salva, Reset</span>
+<a class="link" href="AdvancedCommands/advanced.html">Comandos Avançados</a>
+      </pre>
+    </section>
+
+    <section id="boaspraticas" class="my-4">
+      <h6>Boas Praticas</h6>
+      <pre>
+<span class="command">Simulando trabalho diario Usando</span>
+<span class="description">git status, git add ., git stage,git reset</span>
+<span class="comment"># Histórico, file modified, untracked, deleted</span>
+<a class="link" href="boaspraticas/boaspraticas.html">Boas Praticas</a>
+      </pre>
+    </section>
+  </main>
+
+  <!-- Bootstrap JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script do menu -->
+  <script src="menu.js"></script>
 </body>
 </html>
