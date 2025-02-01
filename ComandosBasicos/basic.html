@@ -31,12 +31,22 @@
           <span class="description">Record changes to the repository</span>
           <span class="comment"># Salva as mudanças com uma mensagem descritiva</span>
         </pre>
-
         <pre>
-          <span class="command">git commit --amend -m "Nova mensagem do commit"
-          </span> 
+          <span class="command">git commit --amend -m "Nova mensagem do commit"</span> 
           <span class="description">Se você deseja apenas alterar a mensagem do último commit</span>
           <span class="comment">#  Editar a Mensagem do Último Commit</span>
+        </pre>  
+        <pre>
+          <span class="command">git commit --amend --no-edit </span> 
+          <span class="description">Isso manterá a mesma mensagem do commit anterior, 
+            apenas atualizando os arquivos.</span>
+          <span class="comment"># apenas atualizando os arquivos.</span>
+        </pre>
+        <pre>
+          <span class="command">git reset --soft HEAD~1 </span> 
+          <span class="description">Se você quiser desfazer completamente o último commit, 
+            mas manter as mudanças nos arquivos:</span>
+          <span class="comment"># Desfazer o Último Commit Localmente.</span>
         </pre>
       </div>
 </body>
