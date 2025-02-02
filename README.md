@@ -43,6 +43,7 @@ ssh-keygen -t ed25519 -C "SeuEmail@exemplo.com"
 Após a execução do comando, sua chave pública será gerada no seguinte local:
 
 /c/Users/seu-usuario/.ssh/id_ed25519.pub
+
 Descrição: Abrir o conteúdo deste arquivo e cadastrá-lo no GitHub
 
 # 🔗 Cadastrando a Chave SSH no GitHub
