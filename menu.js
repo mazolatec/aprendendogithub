@@ -33,7 +33,12 @@ function loadMenu() {
                Anotações  <!-- Ícone + Nome do link -->
             </a>
           </li>
-
+ <!-- LINK PARA Gitgnore -->
+          <li class="nav-item">
+            <a class="nav-link" href="#ignore">
+               Gitginore  <!-- Ícone + Nome do link -->
+            </a>
+          </li>
           <!-- LINK PARA COMANDOS BÁSICOS -->
           <li class="nav-item">
             <a class="nav-link" href="#comandos-basicos">

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gitiginore</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <main class="container mt-04">
+        
+
+        <a class="btn-modern" href="../index.html"> Voltar</a>
+        <div>
+            <div class="category">Exemplos de uso Gitgnore</div>
+<pre>
+    <span class="comment">📌 Onde criar o arquivo .gitignore no seu projeto?
+        O arquivo .gitignore deve ser criado na raiz do seu repositório Git, ou seja, no mesmo nível do diretório .git/. Isso garante que todas as regras sejam aplicadas corretamente a todos os arquivos do projeto. </span>
+    <span class="command"> 🔹 1️⃣ Criar .gitignore na raiz do repositório</span>
+    <span class="comment"> 📂 Estrutura do Projeto (Exemplo)</span>
+    <span> 
+        📁 meu-projeto/
+        ├── 📁 src/          # Código-fonte do projeto
+        ├── 📁 assets/       # Imagens, ícones, CSS
+        ├── 📁 node_modules/ # Dependências (exemplo para Node.js)
+        ├── 📁 .git/         # Diretório do Git (oculto)
+        ├── 📄 .gitignore    # Arquivo de exclusão do Git (aqui!)
+        ├── 📄 README.md     # Documentação do projeto
+        ├── 📄 package.json  # Configuração do projeto (exemplo para Node.js)
+
+    </span>
+</pre>
+
+            <pre>
+              <span class="command">🔹 Exemplo de .gitignore para um projeto comum</span> 
+              <span class="comment">📌 Por que usar esse .gitignore?
+                ✅ Evita arquivos desnecessários no repositório
+                ✅ Mantém o código limpo e organizado
+                ✅ Melhora a performance e evita conflitos</span>
+              <p class="description">
+                # 
+                =======================================
+                # 🔹 ARQUIVOS DO SISTEMA OPERACIONAL
+                # =======================================
+                .DS_Store        # Arquivo oculto do macOS gerado pelo Finder
+                Thumbs.db        # Arquivo de cache de miniaturas no Windows
+                ehthumbs.db      # Miniaturas de imagens no Windows
+                Icon?            # Arquivo de configuração de ícones do macOS
+                *.bak            # Arquivos de backup temporários
+                *.swp            # Arquivos temporários do Vim
+                
+                # =======================================
+                # 🔹 LOGS E ARQUIVOS TEMPORÁRIOS
+                # =======================================
+                *.log            # Arquivos de log gerados automaticamente
+                *.tmp            # Arquivos temporários
+                *.cache          # Cache de programas ou compilações
+                *.pid            # Arquivos de identificação de processos
+                *.seed           # Arquivos temporários de inicialização
+                *.swo            # Arquivos temporários do Vim
+                *.swn            # Arquivos temporários do Vim
+                
+                # =======================================
+                # 🔹 NODE.JS
+                # =======================================
+                node_modules/    # Pacotes instalados pelo npm ou yarn
+                npm-debug.log    # Logs de erro do npm
+                yarn.lock        # Arquivo de bloqueio do gerenciador de pacotes Yarn
+                package-lock.json # Arquivo de dependências fixas do npm
+                
+                # =======================================
+                # 🔹 PYTHON
+                # =======================================
+                __pycache__/     # Arquivos de cache gerados pelo interpretador Python
+                *.pyc            # Arquivos Python compilados
+                *.pyo            # Arquivos Python otimizados
+                *.pyd            # Bibliotecas compiladas para Windows
+                *.venv/          # Ambientes virtuais do Python criados com venv
+                venv/            # Diretório de ambiente virtual Python
+                .env             # Arquivo de variáveis de ambiente (credenciais, chaves)
+                
+                # =======================================
+                # 🔹 VISUAL STUDIO / .NET / C#
+                # =======================================
+                bin/             # Diretório de arquivos binários gerados
+                obj/             # Diretório de arquivos temporários de build
+                .vscode/         # Configurações do VS Code no projeto
+                *.user           # Configurações do usuário no Visual Studio
+                *.suo            # Arquivos de solução do Visual Studio
+                *.sln.cache      # Cache do Visual Studio para soluções
+                *.csproj.user    # Arquivo de configuração do usuário para projetos C#
+                *.vs/            # Pasta com dados temporários do Visual Studio
+                *.exe            # Executáveis compilados
+                *.dll            # Bibliotecas compiladas
+                *.pdb            # Arquivos de depuração do Visual Studio
+                
+                # =======================================
+                # 🔹 QT (C++/Qt Creator)
+                # =======================================
+                *.pro.user       # Arquivo de configuração do usuário para projetos Qt
+                *.moc            # Arquivos gerados pelo Meta-Object Compiler (MOC)
+                Makefile*        # Arquivos Makefile de compilação
+                *.qmake.stash    # Cache do qmake
+                *.o              # Arquivos objeto compilados
+                *.a              # Arquivos de biblioteca estática
+                *.so             # Bibliotecas compartilhadas
+                *.d              # Arquivos de dependência de compilação
+                *.qrc            # Arquivos de recursos do Qt
+                *.rcc            # Arquivos de compilação de recursos do Qt
+                *.rc             # Arquivos de recursos do Windows
+                *.ncb            # Banco de dados IntelliSense do Visual Studio
+                *.sdf            # Arquivos de banco de dados do Visual Studio
+                
+                # =======================================
+                # 🔹 ARQUIVOS DO GIT
+                # =======================================
+                .git/            # Diretório interno do Git (NUNCA remover manualmente)
+                .gitignore       # Arquivo que define os arquivos ignorados
+                .gitmodules      # Arquivo de configuração de submódulos do Git
+                .gitattributes   # Configuração de atributos de arquivos no Git
+                
+                # =======================================
+                # 🔹 ARQUIVOS DE IDEs E EDITORES
+                # =======================================
+                .idea/           # Configurações do IntelliJ IDEA, WebStorm, PHPStorm
+                *.iml            # Arquivos de configuração do IntelliJ IDEA
+                *.sublime-workspace  # Configurações de projetos do Sublime Text
+                *.sublime-project   # Arquivos de projetos do Sublime Text
+                
+                # =======================================
+                # 🔹 ARQUIVOS DE SISTEMA (Linux/macOS)
+                # =======================================
+                .trash/          # Lixeira do sistema Linux/macOS
+                .lldb            # Arquivos de depuração do LLDB
+                .config/         # Configurações gerais do usuário no Linux/macOS
+              </p>
+             
+            </pre>
+            <pre>
+                <span class="command">Que pode ser ignorado 🔹 .arquivo</span> 
+                <span class="description">✅ Ignora apenas arquivos chamados exatamente .arquivo, independente da pasta onde estejam.</span>
+                <span >
+projeto/
+├── .arquivo  ✅ (IGNORADO)
+├── pasta1/
+│   ├── .arquivo  ✅ (IGNORADO)
+│   ├── outro.txt  ❌ (NÃO ignorado)
+├── pasta2/
+│   ├── .arquivo  ✅ (IGNORADO)
+│   ├── teste.arquivo ❌ (NÃO ignorado)</span>
+                
+              </pre>
+              <pre>
+                <span class="command">Que pode ser ignorado 🔹 *.arquivo</span> 
+                <span class="description">✅ Ignora todos os arquivos que terminam com .arquivo, independentemente do nome antes do ponto.</span>
+                <span class="comment">
+    projeto/
+    ├── arquivo1.arquivo  ✅ (IGNORADO)
+    ├── pasta1/
+    │   ├── teste.arquivo  ✅ (IGNORADO)
+    │   ├── exemplo.arquivo  ✅ (IGNORADO)
+    ├── pasta2/
+    │   ├── outro.arquivo  ✅ (IGNORADO)
+    │   ├── .arquivo  ❌ (NÃO ignorado, pois não tem nome antes do ponto)
+                    </span>
+              </pre>
+              <pre>
+                <span>
+                    🔹 Por que usar um .gitignore?
+✅ Evita arquivos desnecessários no repositório (logs, cache, compilados, backups).
+✅ Melhora a organização do código-fonte.
+✅ Reduz conflitos entre desenvolvedores.
+✅ Protege dados sensíveis (senhas, tokens, chaves SSH, variáveis de ambiente).
+✅ Melhora a performance ao evitar rastreamento de arquivos grandes e inúteis.
+                </span>
+              </pre>
+              <pre>
+                <span>
+                🔹 Como funciona o .gitignore?
+O .gitignore segue regras simples:
+
+Cada linha define um padrão de arquivos/pastas a serem ignorados.
+Os arquivos já rastreados pelo Git não serão ignorados automaticamente (é necessário removê-los antes com git rm --cached arquivo).
+Podemos usar curingas (*, ?, !, /) para especificar padrões mais flexíveis.
+</span>              
+</pre>
+       <pre>
+        <span>
+            🔹 Regras Básicas do .gitignore
+Padrão	      Descrição
+*.log	      Ignora todos os arquivos que terminam com .log
+temp/	      Ignora toda a pasta temp/ e seu conteúdo
+/config.json  Ignora apenas o arquivo config.json na raiz do projeto
+!importante.txt	Exceção: força o rastreamento de importante.txt, mesmo que esteja dentro de uma pasta ignorada
+**/logs/	  Ignora qualquer pasta chamada logs/ em qualquer diretório do projeto
+debug?.txt	  Ignora debug1.txt, debug2.txt, mas não debug10.txt
+
+        </span>
+       </pre>      
+
+</div>
+</main>
+    
+</body>
+</html>
