@@ -1,64 +1,182 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic Commands</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/styles.css">
+  <!-- 🔧 Metas essenciais -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- 🏷️ Título -->
+  <title>Basic Commands</title>
+
+  <!-- 🎛️ Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- 🎨 Seu CSS principal -->
+  <link rel="stylesheet" href="../css/styles.css">
 </head>
+
 <body>
   <main class="container mt-4">
-    <a class="command" href="../index.html"> Voltar</a>
+    <!-- 🔙 Voltar -->
+    <a class="command d-inline-block mb-3" href="../index.html">← Voltar</a>
 
+    <!-- /* 📦 Inicialização */ -->
+    <div class="section-title">📦 Inicialização</div>
+    <div class="stack">
+      <pre data-copy="git init">
+  <span class="command">git init</span> 
+  <span class="description">Initialize a new Git repository</span>
+  <span class="comment"># Cria um repositório vazio no diretório atual</span>
+</pre>
+    </div>
 
-    <div>
-        <pre>
-          <span class="command">git init</span> 
-          <span class="description">Initialize a new Git repository</span>
-          <span class="comment"># Cria um repositório vazio no diretório atual</span>
-        </pre>
-        <pre>
-          <span class="command">git status</span> 
-          <span class="description">Show the working tree status</span>
-          <span class="comment"># Exibe mudanças e arquivos rastreados/não rastreados</span>
-        </pre>
-        <pre>
-          <span class="command">git add .</span> 
-          <span class="description">Add file contents to the staging area</span>
-          <span class="comment"># Adiciona arquivos ao índice para o próximo commit</span>
-        </pre>
-        <pre>
-          <span class="command">git add index.html</span> 
-          <span class="description">Adiciona no stage somente index.html</span>
-          <span class="comment"># Adiciona arquivos especificos para o próximo commit</span>
-        </pre>
-        <pre>
-          <span class="command">git commit -m "message"</span> 
-          <span class="description">Record changes to the repository</span>
-          <span class="comment"># Salva as mudanças com uma mensagem descritiva</span>
-        </pre>
-        <pre>
-          <span class="command">git commit --amend -m "Nova mensagem do commit"</span> 
-          <span class="description">Se você deseja apenas alterar a mensagem do último commit</span>
-          <span class="comment">#  Editar a Mensagem do Último Commit</span>
-        </pre>  
-        <pre>
-          <span class="command">git commit --amend --no-edit </span> 
-          <span class="description">Isso manterá a mesma mensagem do commit anterior, apenas atualizando os arquivos.</span>
-          <span class="comment"># apenas atualizando os arquivos.</span>
-        </pre>
-        <pre>
-          <span class="command">git reset --soft HEAD~1 </span> 
-          <span class="description">Se você quiser desfazer completamente o último commit, mas manter as mudanças nos arquivos:</span>
-          <span class="comment"># Desfazer o Último Commit Localmente.</span>
-        </pre>
-      </div>
-  </main>
+    <!-- /* 🔍 Verificar Status */ -->
+    <div class="section-title">🔍 Verificar Status</div>
+    <div class="stack">
+      <pre data-copy="git status">
+  <span class="command">git status</span> 
+  <span class="description">Show the working tree status</span>
+  <span class="comment"># Exibe mudanças e arquivos rastreados/não rastreados</span>
+</pre>
+    </div>
 
-  <!-- Bootstrap JavaScript -->
-   
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
-</html>
+    <!-- /* ➕ Adicionar Arquivos */ -->
+    <div class="section-title">➕ Adicionar Arquivos</div>
+    <div class="stack">
+      <pre data-copy="git add .">
+  <span class="command">git add .</span> 
+  <span class="description">Add file contents to the staging area</span>
+  <span class="comment"># Adiciona todos os arquivos ao índice (stage) para o próximo commit</span>
+</pre>
+
+      <pre data-copy='git add index.html'>
+  <span class="command">git add index.html</span> 
+  <span class="description">Add specific file to the staging area</span>
+  <span class="comment"># Adiciona apenas o arquivo especificado ao stage</span>
+</pre>
+    </div>
+
+    <!-- /* 💾 Commits */ -->
+    <div class="section-title">💾 Commits</div>
+    <div class="stack">
+      <pre data-copy='git commit -m "mensagem"'>
+  <span class="command">git commit -m "mensagem"</span> 
+  <span class="description">Record changes to the repository</span>
+  <span class="comment"># Salva as mudanças com uma mensagem descritiva</span>
+</pre>
+
+      <pre data-copy='git commit --amend -m "Nova mensagem do commit"'>
+  <span class="command">git commit --amend -m "Nova mensagem do commit"</span> 
+  <span class="description">Edit the last commit message</span>
+  <span class="comment"># Edita a mensagem do último commit</span>
+</pre>
+
+      <pre data-copy="git commit --amend --no-edit">
+  <span class="command">git commit --amend --no-edit</span> 
+  <span class="description">Amend last commit without changing message</span>
+  <span class="comment"># Atualiza arquivos do último commit mantendo a mesma mensagem</span>
+</pre>
+    </div>
+
+    <!-- /* ♻️ Reset / Desfazer */ -->
+    <div class="section-title">♻️ Reset / Desfazer</div>
+    <div class="stack">
+      <pre data-copy="git reset --soft HEAD~1">
+  <span class="command">git reset --soft HEAD~1</span> 
+  <span class="description">Undo last commit but keep changes staged</span>
+  <span class="comment"># Desfaz o commit mas mantém as alterações prontas para novo commit</span>
+</pre>
+
+      <pre data-copy="git reset --hard HEAD~1">
+  <span class="command">git reset --hard HEAD~1</span> 
+  <span class="description">Undo and discard all changes</span>
+  <span class="comment"># Remove o último commit e descarta todas as alterações locais</span>
+</pre>
+    </div>
+
+    <!-- /* 🧭 Histórico */ -->
+    <div class="section-title">🧭 Histórico</div>
+    <div class="stack">
+      <pre data-copy="git log">
+  <span class="command">git log</span> 
+  <span class="description">Show commit history</span>
+  <span class="comment"># Exibe histórico completo de commits</span>
+</pre>
+
+      <pre data-copy="git log --oneline --graph --decorate">
+  <span class="command">git log --oneline --graph --decorate</span> 
+  <span class="description">Compact view with graph</span>
+  <span class="comment"># Mostra histórico resumido com gráfico e nomes de branches</span>
+</pre>
+    </div>
+
+    <!-- /* 🪄 Mover e Remover Arquivos */ -->
+    <div class="section-title">🪄 Mover e Remover Arquivos</div>
+    <div class="stack">
+      <pre data-copy="git mv rodape.css css/rodape.css">
+  <span class="command">git mv rodape.css css/rodape.css</span> 
+  <span class="description">Move or rename a file</span>
+  <span class="comment"># Move o arquivo rodape.css para a pasta css e já deixa no stage</span>
+</pre>
+
+      <pre data-copy="git rm style.css">
+  <span class="command">git rm style.css</span> 
+  <span class="description">Remove file and stage deletion</span>
+  <span class="comment"># Remove o arquivo do diretório e prepara a remoção para commit</span>
+</pre>
+    </div>
+
+    <!-- /* 🌿 Branches */ -->
+    <div class="section-title">🌿 Branches</div>
+    <div class="stack">
+      <pre data-copy="git branch">
+  <span class="command">git branch</span> 
+  <span class="description">List all local branches</span>
+  <span class="comment"># Lista todas as branches do projeto</span>
+</pre>
+
+      <pre data-copy="git checkout -b nova-feature">
+  <span class="command">git checkout -b nova-feature</span> 
+  <span class="description">Create and switch to new branch</span>
+  <span class="comment"># Cria e muda para a nova branch</span>
+</pre>
+
+      <pre data-copy="git merge nova-feature">
+  <span class="command">git merge nova-feature</span> 
+  <span class="description">Merge branch into current</span>
+  <span class="comment"># Une alterações da branch nova-feature na branch atual</span>
+</pre>
+    </div>
+
+    <!-- /* 🌐 Repositório Remoto */ -->
+    <div class="section-title">🌐 Repositório Remoto</div>
+    <div class="stack">
+      <pre data-copy="git remote add origin https://github.com/usuario/repositorio.git">
+  <span class="command">git remote add origin https://github.com/usuario/repositorio.git</span> 
+  <span class="description">Connect local repo to remote</span>
+  <span class="comment"># Associa o repositório local ao GitHub (remoto principal)</span>
+</pre>
+
+      <pre data-copy="git push -u origin main">
+  <span class="command">git push -u origin main</span> 
+  <span class="description">Push branch to remote (set upstream)</span>
+  <span class="comment"># Envia a branch local e define o acompanhamento remoto</span>
+</pre>
+
+      <pre data-copy="git pull">
+  <span class="command">git pull</span> 
+  <span class="description">Fetch and merge changes from remote</span>
+  <span class="comment"># Baixa e integra atualizações do repositório remoto</span>
+</pre>
+    </div>
+
+    <!-- /* ⚙️ Configurações */ -->
+    <div class="section-title">⚙️ Configurações</div>
+    <div class="stack">
+      <pre data-copy='git config --global user.name "Seu Nome"'>
+  <span class="command">git config --global user.name "Seu Nome"</span> 
+  <span class="description">Set global username</span>
+  <span class="comment"># Define o nome de usuário global</span>
+</pre>
+
+      <pre data-c
